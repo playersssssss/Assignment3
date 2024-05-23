@@ -6,11 +6,20 @@ def greater_common_divisor(A: int, B: int):
 
     return A  # When B is 0, A is the Greatest Common Divisor
 
+    # Read two integers form user input
 
-# Read two integers form user input
-A = int(input("Please input the integer A :"))  # Prompt the user to input the first integer
-B = int(input("Please input the integer B:"))  # Prompt the user to input the second integer
-# call the greater_common_divisor function to compute the Greatest Common Divisor
-result = greater_common_divisor(A, B)
-# Output the Greatest Common Divisor
-print("The greater common divisor is:", result)  # Print the result
+
+while True:
+    try:
+        A = int(input("Please input the integer A :"))  # Prompt the user to input the first integer
+        B = int(input("Please input the integer B:"))  # Prompt the user to input the second integer
+        if A <= 0 or B <= 0:
+            raise ValueError("Number should be positive integer.")
+
+        # call the greater_common_divisor function to compute the Greatest Common Divisor
+        result = greater_common_divisor(A, B)
+        # Output the Greatest Common Divisor
+        print("The greater common divisor is:", result)  # Print the result
+        break
+    except ValueError as ve:
+        print("Error", ve)
