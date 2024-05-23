@@ -6,7 +6,7 @@ def greater_common_divisor(A: int, B: int):
 
     return A  # When B is 0, A is the Greatest Common Divisor
 
-    # Read two integers form user input
+    # Read two integers form user input and check they are both positive
 
 
 while True:
